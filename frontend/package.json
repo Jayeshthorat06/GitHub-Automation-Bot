@@ -1,0 +1,24 @@
+{
+  "name": "github-automation-bot-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^5.0.4",
+    "event-driven-github-automation-bot": "file:..",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.7"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  },
+  "devDependencies": {
+    "@types/react-dom": "^19.3.0"
+  }
+}
