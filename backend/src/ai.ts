@@ -17,7 +17,16 @@ export async function triageWithGemini(input: { title: string; body: string; aut
     const parsed = JSON.parse(text.replace(/^```json\s*|```$/g, '').trim());
     if (!parsed.summary || !parsed.suggestedLabel || !['low', 'medium', 'high'].includes(parsed.priority)) return null;
     return parsed;
-  } catch {
+  } catch (error: any) {
+    console.error(
+      JSON.stringify({
+        component: 'gemini',
+        error: 'Gemini API request failed',
+        status: error?.response?.status,
+        message: error?.response?.data?.error?.message ?? error?.message
+      })
+    );
+
     return null;
   }
 }
