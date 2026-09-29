@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@vitejs/plugin-react": "^5.0.4",
+    "event-driven-github-automation-bot": "file:..",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "typescript": "^5.9.2",
